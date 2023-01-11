@@ -63,16 +63,16 @@ class Ghost {
 
     moveBackwards() {
         switch (this.direction) {
-            case 4: // Right
+            case 4: 
                 this.x -= this.speed;
                 break;
-            case 3: // Up
+            case 3: 
                 this.y += this.speed;
                 break;
-            case 2: // Left
+            case 2: 
                 this.x += this.speed;
                 break;
-            case 1: // Bottom
+            case 1: 
                 this.y -= this.speed;
                 break;
         }
@@ -80,16 +80,16 @@ class Ghost {
 
     moveForwards() {
         switch (this.direction) {
-            case 4: // Right
+            case 4: 
                 this.x += this.speed;
                 break;
-            case 3: // Up
+            case 3: 
                 this.y -= this.speed;
                 break;
-            case 2: // Left
+            case 2: 
                 this.x -= this.speed;
                 break;
-            case 1: // Bottom
+            case 1: 
                 this.y += this.speed;
                 break;
         }
@@ -178,7 +178,7 @@ class Ghost {
             }
         }
 
-        return 1; // direction
+        return 1;
     }
 
     addNeighbors(poped, mp) {

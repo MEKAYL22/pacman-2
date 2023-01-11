@@ -21,7 +21,7 @@ let ghostImageLocations = [
     { x: 176, y: 121 },
 ];
 
-// Game variables
+
 let fps = 30;
 let pacman;
 let oneBlockSize = 20;
@@ -31,9 +31,7 @@ let wallSpaceWidth = oneBlockSize / 1.6;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
 let wallInnerColor = "black";
 
-// we now create the map of the walls,
-// if 1 wall, if 0 not wall
-// 21 columns // 23 rows
+
 let map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -70,11 +68,6 @@ let randomTargetsForGhosts = [
     },
 ];
 
-// for (let i = 0; i < map.length; i++) {
-//     for (let j = 0; j < map[0].length; j++) {
-//         map[i][j] = 2;
-//     }
-// }
 
 let createNewPacman = () => {
     pacman = new Pacman(
@@ -253,16 +246,16 @@ window.addEventListener("keydown", (event) => {
     let k = event.keyCode;
     setTimeout(() => {
         if (k == 37 || k == 65) {
-            // left arrow or a
+          
             pacman.nextDirection = DIRECTION_LEFT;
         } else if (k == 38 || k == 87) {
-            // up arrow or w
+          
             pacman.nextDirection = DIRECTION_UP;
         } else if (k == 39 || k == 68) {
-            // right arrow or d
+    
             pacman.nextDirection = DIRECTION_RIGHT;
         } else if (k == 40 || k == 83) {
-            // bottom arrow or s
+
             pacman.nextDirection = DIRECTION_BOTTOM;
         }
     }, 1);
